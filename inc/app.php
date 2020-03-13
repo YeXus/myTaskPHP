@@ -19,21 +19,50 @@
     <div class="container">
         <div class="box">
             <header class="navbarAPP">
-                <!-- Image and text -->
+                
+                <!--====== NAVBAR ======-->
                 <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <h3>MyTask <i class="fas fa-cookie-bite"></i></h3>
-                </a>
+                
+                    <!--====== USER MESSAGE ======-->
+                    <a style="padding-top: 2.5%;">
+                        <h6><i class="fas fa-user-circle"></i> Hi %user%<?php  ?></h6>
+                    </a>
 
-                <a class="navbar" href="#">
-                    <i class="fas fa-cog"></i>
-                </a>
+                    <div class="navbarBtn">
+                        <!--====== SETTINGS ======-->
+                        <a href="settings.php" style="padding-right: 10px;">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    
+                        <!--====== LOGOUT ======-->
+                        <a href="login.php">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a> <br>
+                    </div>
 
-                <a href="#">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
                 </nav>
-            </header>    
+            </header>
+            
+            <!--====== APP ======-->
+            <div class="app">
+                <!--====== LOGO AND TEXT ======-->
+                <h3 style="padding-top: 2%;">MyTask <i class="fas fa-cookie-bite"></i></h3>
+                <h6>Create a task</h6>
+
+                <!--====== INSERT TASK ======-->
+                <div class="taskForm">
+                    <form method="POST" action="#">
+                        <input type="text" class="form-control" placeholder="Ex: fix bugs" name="task">
+                        <button type="submit" class="btn btn-dark btn-block">+</buttons>
+                    </form>
+                </div>
+
+                <!--====== LIST TASKS ======-->
+                <h6>Your Tasks</h6>
+                <div class="taskList">
+                    <h5>%tasks%</h5>
+                </div>
+            </div>
         </div>
     </div>
 </body>

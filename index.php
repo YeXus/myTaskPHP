@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                <a class="btn btn-success btn-block" href="inc/register.php">START NOW</a>
+                <a class="btn btn-dark btn-block" href="inc/register.php">START NOW</a>
                 <h5 style="padding-top: 4%;"><a href="inc/login.php">I already have a account</a><h5>
             </div>
         </div>

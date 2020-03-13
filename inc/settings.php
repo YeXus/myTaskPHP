@@ -7,21 +7,55 @@
 <!--API GOOGLE FONTS-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet"> 
 
-<link rel="stylesheet" href="../css/RegisterStyle.css">
+<link rel="stylesheet" href="../css/SettingsStyle.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyTask - Register</title>
+    <title>MyTask - Settings</title>
 </head>
 <body>
     <div class="container">
         <div class="box">
-                <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
-                <!--<h3>Register</h3>-->
-                <div class="items">
-                    <form method="POST" action="../functions/register.php">
+            <header class="navbarAPP">
+                
+                <!--====== NAVBAR ======-->
+                <nav class="navbar navbar-light bg-light">
+                
+                    <!--====== USER MESSAGE ======-->
+                    <a style="padding-top: 2.5%;">
+                        <h6><i class="fas fa-user-circle"></i> Hi %user%<?php  ?></h6>
+                    </a>
+
+                    <div class="navbarBtn">
+                        <!--====== BACK TO APP ======-->
+                        <a href="app.php" style="padding-right: 10px;">
+                            <i class="fas fa-chevron-circle-left"></i>
+                        </a>
+
+                        <!--====== SETTINGS ======-->
+                        <a href="settings.php" style="padding-right: 10px;">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    
+                        <!--====== LOGOUT ======-->
+                        <a href="login.php">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a> <br>
+                    </div>
+                </nav>
+            </header>
+            
+            <!--====== APP ======-->
+            <div class="app">
+                <!--====== LOGO AND TEXT ======-->
+                <h3 style="padding-top: 2%;">MyTask <i class="fas fa-cookie-bite"></i></h3>
+                <h6>Settings</h6>
+
+                <!--====== SETTINGS FORM ======-->
+                <div class="taskForm">
+                    <form method="POST" action="#">
                         <!--====== USERNAME ======-->      
                         <div class="input-group mb-2 mr-sm-2">
                             <div class="input-group-prepend">
@@ -54,12 +88,10 @@
                             <input type="file" class="form-control" name="photo" style="border-left: none;">
                         </div>
 
-                        <div class="buttons">
-                            <button type="submit" class="btn btn-dark btn-block" href="../inc/register.php">LETS GO!</button>
-                            <h6 style="padding-top: 4%;">You already have a account? <a href="../inc/login.php">Sign in</a></h6>
-                        </div>
+                        <button type="submit" class="btn btn-dark btn-block">CHANGE</buttons>
                     </form>
-                <div>    
+                </div>
+            </div>
         </div>
     </div>
 </body>

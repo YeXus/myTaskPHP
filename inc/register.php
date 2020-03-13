@@ -19,7 +19,7 @@
     <div class="container">
         <div class="box">
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
-                <h3>Register</h3>
+                <!--<h3>Register</h3>-->
                 <div class="items">
                     <form method="POST" action="../functions/register.php">
                         <label>Username</label>
@@ -36,7 +36,7 @@
 
                         <div class="buttons">
                             <button type="submit" class="btn btn-success btn-block" href="../inc/register.php">LETS GO!</button>
-                            <a href="../inc/login.php">I already have a account</a>
+                            <h6 style="padding-top: 4%;">You already have a account? <a href="../inc/login.php">Sign in</a></h6>
                         </div>
                     </form>
                 <div>    

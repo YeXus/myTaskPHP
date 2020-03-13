@@ -22,14 +22,34 @@
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
                 <h3>What is MyTask?</h3>
                 <h4>MyTask is a virtual platform for all types of persons (focused to students and programmers), to create and manage your personal or job tasks keeping all organized </h4>
-                <h5>Saw a few examples:<h5>
-                <div style="padding-bottom: 5%;" class="photos">
-                    <img src="#" width="100px" height="100px">
-                    <img src="#" width="100px" height="100px">
-                    <img src="#" width="100px" height="100px">
+                <h5>MyTask has made for:<h5>
+                <div style="padding-bottom: 5%;" class="row">
+                    <div style="padding-left: 10%; padding-right: 10%;" class="row">
+                        <!--====== PRIMEIRA IMG ======-->
+                        <div class="col">
+                            <img src="img/programmer.png" width="100px" height="100px">
+                            <br/>
+                            <span>programmers</span>
+                        </div>
+                        
+                        <!--====== SEGUNDA IMG ======-->
+                        <div class="col">
+                            <img src="img/student.png" width="100px" height="100px">
+                            <br/>
+                            <span>students</span>
+                        </div>
+
+                        <!--====== TERCEIRA IMG ======-->
+                        <div class="col">
+                            <img src="img/task.png" width="100px" height="100px">
+                            <br/>
+                            <span>everyone</span>
+                        </div>
+                    </div>
                 </div>
+
                 <a class="btn btn-success btn-block" href="inc/register.php">START NOW</a>
-                <a href="inc/login.php">I already have a account</a>
+                <h5 style="padding-top: 4%;"><a href="inc/login.php">I already have a account</a><h5>
             </div>
         </div>
     </div>

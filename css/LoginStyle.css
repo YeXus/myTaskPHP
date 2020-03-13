@@ -16,7 +16,13 @@ body{
     border-radius: 2px 2px 2px 2px ;
 }
 
-.box h1, h3, h4, h5{
+.box h3, h4, h5{
+    text-align: center;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+.box h1{
+    padding-top: 5%;
     text-align: center;
     font-family: 'Baloo Chettan 2', cursive;
 }
@@ -34,6 +40,7 @@ body{
     padding-bottom: 5%;
     padding-left: 5%;
     padding-right: 5%;
+    text-align: center;
 }
 
 #form label {
@@ -45,4 +52,10 @@ body{
 
 .buttons{
     padding-top: 2%;
+}
+
+.left{
+    text-align: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }

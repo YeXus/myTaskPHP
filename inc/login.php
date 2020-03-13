@@ -19,7 +19,7 @@
     <div class="container">
         <div class="box">
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
-                <h3>Login</h3>
+                <!--<h3>Login</h3>-->
                 <div class="items">
                     <form method="POST" action="../functions/register.php">
                         <label>Username</label>
@@ -28,11 +28,13 @@
                         <label>Password</label>
                         <input type="password" class="form-control" name="password">
                         
-                        <a href="resetpassword.php">Forget my password</a>
+                        <div class="left">
+                            <a href="resetpassword.php">Forget my password</a>
+                        </div>
                         
                         <div class="buttons">
                             <button type="submit" class="btn btn-success btn-block" href="../inc/register.php">SIGN IN</button>
-                            <h6>Dont have a account? <a href="../inc/register.php">Sign up</a></h6>
+                            <h6 style="padding-top: 4%;">Dont have a account? <a href="../inc/register.php">Sign up</a></h6>
                         </div>
                     </form>
                 <div>    

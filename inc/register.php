@@ -19,7 +19,7 @@
     <div class="container">
         <div class="box">
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
-                <!--<h3>Register</h3>-->
+                <h4>Register</h4>
                 <div class="items">
                     <form method="POST" action="../functions/register.php">
                         <!--====== USERNAME ======-->      

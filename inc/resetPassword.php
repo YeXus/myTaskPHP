@@ -7,43 +7,32 @@
 <!--API GOOGLE FONTS-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet"> 
 
-<link rel="stylesheet" href="../css/LoginStyle.css">
+<link rel="stylesheet" href="../css/resetPasswordStyle.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyTask - Login</title>
+    <title>MyTask - Reset Password</title>
 </head>
 <body>
     <div class="container">
         <div class="box">
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
-                <h4>Login</h4>
+                <h4>Reset your password</h4>
                 <div class="items">
-                    <form method="POST" action="../functions/register.php">
-                        <!--====== USERNAME ======-->      
-                        <div class="input-group mb-2 mr-sm-2">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-user" aria-hidden="true"></i></div>
-                            </div>
-                            <input type="text" class="form-control" name="username" style="border-left: none;" placeholder="username">
-                        </div>
-
-                        <!--====== PASSWORD ======-->      
+                    <form method="POST" action="../functions/resetpassword.php">
+                        <!--====== EMAIL ======--> 
+                        <label>Put your email address below, we will send an email containing your password</label>     
                         <div class="input-group mb-2 mr-sm-2">
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                             </div>
-                            <input type="password" class="form-control" name="password" style="border-left: none;" placeholder="password">
+                            <input type="email" class="form-control" name="email" style="border-left: none;" placeholder="email">
                         </div>
-                        
-                        <div class="left">
-                            <a href="resetPassword.php">Forget my password</a>
-                        </div>
-                        
+                        <!--====== BUTTONS ======--> 
                         <div class="buttons">
-                            <button type="submit" class="btn btn-dark btn-block" href="../inc/register.php">SIGN IN</button>
+                            <button type="submit" class="btn btn-dark btn-block">SEND</button>
                             <h6 style="padding-top: 4%;">Dont have a account? <a href="../inc/register.php">Sign up</a></h6>
                         </div>
                     </form>

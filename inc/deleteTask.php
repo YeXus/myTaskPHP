@@ -18,13 +18,11 @@
 
     // Verify if not have the variable to verify the session
     if (!isset($_SESSION['UserId'])) {
-    // Destroy the session for security
-    session_destroy();
-    // And redirect to the login page
-    header("Refresh:2; url=../inc/login.php"); exit;
+        // Destroy the session for security
+        session_destroy();
+        // And redirect to the login page
+        header("Refresh:2; url=../inc/login.php"); exit;
     }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +30,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyTask - APP</title>
+    <title>MyTask - Delete Task</title>
 </head>
 <body>
     <div class="container">
@@ -48,9 +46,9 @@
                     </a>
 
                     <div class="navbarBtn">
-                        <!--====== SETTINGS ======-->
-                        <a href="settings.php" style="padding-right: 10px;">
-                            <i class="fas fa-cog"></i>
+                        <!--====== BACK TO APP ======-->
+                        <a href="app.php" style="padding-right: 10px;">
+                            <i class="fas fa-chevron-circle-left"></i>
                         </a>
                     
                         <!--====== LOGOUT ======-->
@@ -66,17 +64,24 @@
             <div class="app">
                 <!--====== LOGO AND TEXT ======-->
                 <h3 style="padding-top: 2%;">MyTask <i class="fas fa-cookie-bite"></i></h3>
-                <h6>Create a task</h6>
+                <h6>Delete your task</h6>
 
                 <!--====== INSERT TASK ======-->
-                <div class="taskForm" style="padding-bottom: 2%;">
-                        <a href="createTask.php" class="btn btn-dark btn-block"><i class="fas fa-plus-circle"></i></a>
-                </div>
-
-                <!--====== LIST TASKS ======-->
-                <h6>Your Tasks</h6>
-                <div class="taskList">
-                    <h5>%tasks%</h5>
+                <div class="taskForm">
+                    <div class="items">
+                        <form method="POST" action="../functions/deleteTask.php">
+                            <!--====== TASK ======-->      
+                            <div class="input-group mb-2 mr-sm-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+                                </div>
+                                <input type="text" class="form-control" name="task" style="border-left: none;" placeholder="Ex: Fix a bug in my application.">
+                            </div>
+                            <div class="buttons">
+                                <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </form>
+                    <div>    
                 </div>
             </div>
         </div>

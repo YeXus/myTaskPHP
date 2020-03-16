@@ -28,7 +28,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                             </div>
-                            <input type="email" class="form-control" name="email" style="border-left: none;" placeholder="email">
+                            <input type="email" class="form-control" name="email" style="border-left: none;" placeholder="Email">
                         </div>
                         <!--====== BUTTONS ======--> 
                         <div class="buttons">

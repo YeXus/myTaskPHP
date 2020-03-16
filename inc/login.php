@@ -7,6 +7,11 @@
 <!--API GOOGLE FONTS-->
 <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet"> 
 
+<!--CSS-->
+<link rel="stylesheet" href="../css/LoginStyle.css">
+
+
+
 <link rel="stylesheet" href="../css/LoginStyle.css">
 <!DOCTYPE html>
 <html lang="en">
@@ -20,14 +25,22 @@
         <div class="box">
                 <h1>MyTask <i class="fas fa-cookie-bite"></i></h1>
                 <h4>Login</h4>
+                
+                <h4 class="text-center text-danger"><?PHP
+                    if(isset($_SESSION['loginErro'])){
+                        echo $_SESSION['loginErro'];
+                        unset ($_SESSION['loginErro']);
+                    }
+                ?></h4>
+                
                 <div class="items">
-                    <form method="POST" action="../functions/register.php">
+                    <form method="POST" action="../functions/loginValidate.php">
                         <!--====== USERNAME ======-->      
                         <div class="input-group mb-2 mr-sm-2">
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-user" aria-hidden="true"></i></div>
                             </div>
-                            <input type="text" class="form-control" name="username" style="border-left: none;" placeholder="username">
+                            <input type="text" class="form-control" name="username" style="border-left: none;" placeholder="Username">
                         </div>
 
                         <!--====== PASSWORD ======-->      
@@ -35,7 +48,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="background-color: #ffff; border-right: none;"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                             </div>
-                            <input type="password" class="form-control" name="password" style="border-left: none;" placeholder="password">
+                            <input type="password" class="form-control" name="password" style="border-left: none;" placeholder="Password">
                         </div>
                         
                         <div class="left">
@@ -43,7 +56,7 @@
                         </div>
                         
                         <div class="buttons">
-                            <button type="submit" class="btn btn-dark btn-block" href="../inc/register.php">SIGN IN</button>
+                            <button type="submit" name="signin" class="btn btn-dark btn-block" href="../inc/register.php">SIGN IN</button>
                             <h6 style="padding-top: 4%;">Dont have a account? <a href="../inc/register.php">Sign up</a></h6>
                         </div>
                     </form>

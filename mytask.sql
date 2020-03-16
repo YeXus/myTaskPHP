@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Mar-2020 às 22:55
+-- Tempo de geração: 17-Mar-2020 às 00:57
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.2.28
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `mytask`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `access_level`
+--
+
+CREATE TABLE `access_level` (
+  `id` int(11) NOT NULL,
+  `levelName` varchar(100) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -44,13 +57,29 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
-  `password` varchar(200) NOT NULL,
-  `photo` longblob NOT NULL
+  `password` varchar(500) NOT NULL,
+  `accessLevelId` int(11) NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `accessLevelId`, `created`, `modified`) VALUES
+(14, 'BrunoTaletti', 'brunotaletti24@gmail.com', '850d846889e82f4264dd79e1c750632b', 0, '2020-03-16 17:49:50', NULL),
+(15, 'Cleber', 'cleber@cleber.com', '202cb962ac59075b964b07152d234b70', 0, '2020-03-16 18:28:29', NULL);
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `access_level`
+--
+ALTER TABLE `access_level`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `tasks`
@@ -69,6 +98,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT de tabela `access_level`
+--
+ALTER TABLE `access_level`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `tasks`
 --
 ALTER TABLE `tasks`
@@ -78,7 +113,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
